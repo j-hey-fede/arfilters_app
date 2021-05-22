@@ -1,6 +1,7 @@
 import 'package:avatar_view/avatar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:camera_deep_ar/camera_deep_ar.dart';
+import './licence_keys.dart';
 import 'dart:io' as Platform;
 
 class CameraWithMaskFiltersScreen extends StatefulWidget {
@@ -35,7 +36,7 @@ class _CameraWithMaskFiltersScreenState
                 setState(() {});
               },
               androidLicenceKey:
-                  "e40607cdfaaa4c9f740fe2b938a1b1f47fe803f9eed684c8d6cf2651fce585927450cad29772c588",
+                  LicKeys.keyAndroid,
               cameraDeepArCallback: (c) async {
                 cameraDeepArController = c;
                 setState(() {});
@@ -47,7 +48,7 @@ class _CameraWithMaskFiltersScreenState
               },
               onVideoRecorded: (String path) {},
               iosLicenceKey:
-                  "cb3e77c21cd8154e230f425267d30518956c59c1ca77af7ce0cc8fbf09c67079b1e19bb4fad2679d",
+                  LicKeys.keyIos,
             ),
             // Face Mask Filters - Image buttons
             Align(
